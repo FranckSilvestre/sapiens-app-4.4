@@ -5,7 +5,7 @@ class ActeurService {
 	boolean transactional = true
 	
 	/**
-	 * Crée un nouvel apprenant
+	 * Cr√©e un nouvel apprenant
 	 * @param prenom le prenom
 	 * @param nom le nom
 	 * @return l'apprenant
@@ -15,7 +15,7 @@ class ActeurService {
     }
 	
 	/**
-	 * Crée un nouveau gestionnaire
+	 * Cr√©e un nouveau gestionnaire
 	 * @param prenom
 	 * @param nom
 	 * @return le gestionnaire

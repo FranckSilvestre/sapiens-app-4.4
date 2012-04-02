@@ -5,7 +5,7 @@ import org.hibernate.Session
 class GestionCompetencesService {
 
 	/**
-	 * Crée un nouveau domaine de compétences
+	 * Cr√©e un nouveau domaine de comp√©tences
 	 * @param code le code
 	 * @param libelleCourt le libelle court
 	 * @return le nouveau domaine
@@ -18,13 +18,13 @@ class GestionCompetencesService {
 	
 	/**
 	 * Supprime un domaine
-	 * @param code le code du domaine à supprimer
+	 * @param code le code du domaine √† supprimer
 	 */
 	def deleteDomaineCompetences(String code) {
 		def domaine = DomaineCompetences.findByCode(code)
 		if (domaine) {
 			// exemple de suppression en utilisant une requete sql native
-			// il est possible dans ce cas de déclarer une constraint cascade 
+			// il est possible dans ce cas de d√©clarer une constraint cascade 
 			// directement au niveau de la bdd
 			SuiviCompetence.withSession { Session session ->
 				session.createSQLQuery(
@@ -40,11 +40,11 @@ class GestionCompetencesService {
 	}
 	
 	/**
-	 * Crée une nouvelle compétence
+	 * Cr√©e une nouvelle comp√©tence
 	 * @param code le code
-	 * @param libelleCourt le libellé court
+	 * @param libelleCourt le libell√© court
 	 * @param domaine le domaine
-	 * @return la compétence crée
+	 * @return la comp√©tence cr√©e
 	 */
 	Competence newCompetence(String code, String libelleCourt, DomaineCompetences domaine) {
 		def competence = new Competence(code: code, libelleCourt:libelleCourt)
@@ -57,7 +57,7 @@ class GestionCompetencesService {
 	}
 	
 	/**
-	 * Inscrit un acteur à un domaine
+	 * Inscrit un acteur √† un domaine
 	 * @param acteur l'acteur 
 	 * @param domaine le domaine
 	 * 
