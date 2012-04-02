@@ -11,6 +11,11 @@ class Role {
 		libelleCourt(blank:false)
 		libelleLong(nullable:true)
 	}
+	
+	String toString() {
+		libelleCourt
+	}
+	
 }
 
 enum RoleCode {

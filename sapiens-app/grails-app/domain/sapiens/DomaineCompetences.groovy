@@ -17,5 +17,8 @@ class DomaineCompetences {
 		libelleLong(nullable:true)
 	}
 	
+	String toString() {
+		libelleCourt
+	}
 	
 }

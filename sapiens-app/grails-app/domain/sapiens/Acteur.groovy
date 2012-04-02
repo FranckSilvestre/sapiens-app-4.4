@@ -18,4 +18,8 @@ class Acteur {
 		nom blank:false
 		prenom blank: false
     }
+	
+	String toString() {
+		"$prenom ${nom.toUpperCase()}"
+	}
 }

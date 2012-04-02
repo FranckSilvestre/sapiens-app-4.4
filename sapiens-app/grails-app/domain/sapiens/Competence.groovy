@@ -12,6 +12,9 @@ class Competence {
 		domaine:DomaineCompetences
 	]
 
+	String toString() {
+		"$code - ${libelleCourt}"
+	}
 	
 	static constraints = {
 		code(blank:false)
