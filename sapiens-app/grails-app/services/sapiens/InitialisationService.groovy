@@ -21,47 +21,47 @@ class InitialisationService {
 	
 	def initialiseDonneesTest() {
 		
-			// domaines de compétence
+			// domaines de comp√©tence
 			DomaineCompetences scf = gestionCompetencesService.newDomaineCompetences(
 					"SOCLE_COMMUN_FRAN",
-					"Socle commun de compétences en français"
+					"Socle commun de comp√©tences en fran√ßais"
 			)
 			
 			DomaineCompetences scm = gestionCompetencesService.newDomaineCompetences(
 					"SOCLE_COMMUN_MATH",
-					"Socle commun de compétences en Mathématiques"
+					"Socle commun de comp√©tences en Math√©matiques"
 			)
 		
-			// compétences
+			// comp√©tences
 			gestionCompetencesService.newCompetence(
 					"SCF_001",
-					"Savoir reconnaître le temps des verbes",
+					"Savoir reconna√Ætre le temps des verbes",
 					scf
 			)
 			gestionCompetencesService.newCompetence(
 					"SCF_002",
-					"Savoir reconnaître les constructions grammaticales",
+					"Savoir reconna√Ætre les constructions grammaticales",
 					scf
 			)
 			gestionCompetencesService.newCompetence(
 					"SCF_003",
-					"Savoir différencier les adverbes des ajectifs",
+					"Savoir diff√©rencier les adverbes des ajectifs",
 					scf
 			)
 			gestionCompetencesService.newCompetence(
 					"SCF_004",
-					"Savoir conjuguer les verbes du premier groupe au subjonctif présent",
+					"Savoir conjuguer les verbes du premier groupe au subjonctif pr√©sent",
 					scf
 			)
 			gestionCompetencesService.newCompetence(
 					"SCF_005",
-					"Savoir conjuguer les verbes du deuxième groupe au subjonctif présent",
+					"Savoir conjuguer les verbes du deuxi√®me groupe au subjonctif pr√©sent",
 					scf
 			)
 		
 			gestionCompetencesService.newCompetence(
 					"SCM_001",
-					"Savoir utiliser les quatres opérations de bases",
+					"Savoir utiliser les quatres op√©rations de bases",
 					scm
 			)
 			gestionCompetencesService.newCompetence(
@@ -71,22 +71,22 @@ class InitialisationService {
 			)
 			gestionCompetencesService.newCompetence(
 					"SCM_003",
-					"Savoir identifier les situations de proportionnalité",
+					"Savoir identifier les situations de proportionnalit√©",
 					scm
 			)
 			gestionCompetencesService.newCompetence(
 					"SCM_004",
-					"Savoir reconnaître une identité remarquable",
+					"Savoir reconna√Ætre une identit√© remarquable",
 					scm
 			)
 			gestionCompetencesService.newCompetence(
 					"SCF_005",
-					"Savoir développer et factoriser",
+					"Savoir d√©velopper et factoriser",
 					 scm
 			)
 		
 			// acteurs
-			acteurService.newApprenant("Durand","Cécile")
+			acteurService.newApprenant("Durand","C√©cile")
 			acteurService.newApprenant("Dupont","Jacques")
 			acteurService.newApprenant("Grimal","Tom")
 			acteurService.newApprenant("Cros","Caherine")
