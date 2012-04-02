@@ -12,7 +12,7 @@
               <li><g:link controller="domaineCompetences">Gérer les domaines de compétences</g:link></li>
               <li><g:link controller="competence">Gérer les compétences</g:link></li>
               <li><g:link controller="acteur">Gérer les acteurs</g:link></li>
-<%--              <li><g:link controller="suiviCompetence">Suivre les compétences</g:link></li>--%>
+              <li><g:link controller="suiviCompetence">Suivre les compétences</g:link></li>
 <%--              <li><g:link controller="suiviCompetence" action="moteurRecherche">Recherche des suivis de compétences</g:link></li>--%>
             </ul>
         </div>

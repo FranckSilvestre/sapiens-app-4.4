@@ -17,11 +17,22 @@ class GestionCompetencesService {
 	}
 	
 	/**
+	*  Mise à jour du domaine de compétence
+	*/
+   DomaineCompetences updateDomaineCompetence(DomaineCompetences domaine) {
+	 domaine.save()
+	 domaine.acteursEvalues.each {
+	   inscritActeurPourEvaluationAuDomaine(it, domaine)
+	 }
+	 return domaine
+ 
+   }
+	
+	/**
 	 * Supprime un domaine
-	 * @param code le code du domaine à supprimer
+	 * @param domaine le domaine à supprimer
 	 */
-	def deleteDomaineCompetences(String code) {
-		def domaine = DomaineCompetences.findByCode(code)
+	def deleteDomaineCompetences(DomaineCompetences domaine) {
 		if (domaine) {
 			// exemple de suppression en utilisant une requete sql native
 			// il est possible dans ce cas de déclarer une constraint cascade 
@@ -35,7 +46,7 @@ class GestionCompetencesService {
 				.executeUpdate()
 				
 			}
-			domaine.delete()
+			domaine.delete(flush:true)
 		}
 	}
 	

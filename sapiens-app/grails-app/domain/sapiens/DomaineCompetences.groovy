@@ -16,9 +16,16 @@ class DomaineCompetences {
 		libelleCourt(blank:false)
 		libelleLong(nullable:true)
 	}
-	
+
 	String toString() {
 		libelleCourt
 	}
 	
+	static mapping = {
+		competences sort:'code'
+	  }
+
+	List<Acteur> getActeursEvaluesTries() {
+		acteursEvalues.sort { it.nom }
+	}
 }

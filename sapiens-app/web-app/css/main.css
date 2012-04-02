@@ -583,3 +583,22 @@ a.skip {
 	position: absolute;
 	left: -9999px;
 }
+
+
+/* suivi competences */
+.non_acquis {
+  background:#ff6666;
+  border-width:2px;
+  border-color:#999999;
+}
+
+.en_cours_acquisition {
+  background:#ffcc99;
+  border-color:#999999;
+}
+
+.acquis {
+  background:#99ff99;
+  border-color:#999999;
+}
+

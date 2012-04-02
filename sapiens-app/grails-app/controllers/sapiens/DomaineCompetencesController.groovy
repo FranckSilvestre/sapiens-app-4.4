@@ -3,6 +3,8 @@ package sapiens
 import org.springframework.dao.DataIntegrityViolationException
 
 class DomaineCompetencesController {
+	
+	GestionCompetencesService gestionCompetencesService
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -21,7 +23,7 @@ class DomaineCompetencesController {
 
     def save() {
         def domaineCompetencesInstance = new DomaineCompetences(params)
-        if (!domaineCompetencesInstance.save(flush: true)) {
+        if (!gestionCompetencesService.updateDomaineCompetence(domaineCompetencesInstance)) {
             render(view: "create", model: [domaineCompetencesInstance: domaineCompetencesInstance])
             return
         }
@@ -73,7 +75,7 @@ class DomaineCompetencesController {
 
         domaineCompetencesInstance.properties = params
 
-        if (!domaineCompetencesInstance.save(flush: true)) {
+        if (!gestionCompetencesService.updateDomaineCompetence(domaineCompetencesInstance)) {
             render(view: "edit", model: [domaineCompetencesInstance: domaineCompetencesInstance])
             return
         }
@@ -91,7 +93,7 @@ class DomaineCompetencesController {
         }
 
         try {
-            domaineCompetencesInstance.delete(flush: true)
+			gestionCompetencesService.deleteDomaineCompetences(domaineCompetencesInstance)
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'domaineCompetences.label', default: 'DomaineCompetences'), params.id])
             redirect(action: "list")
         }
