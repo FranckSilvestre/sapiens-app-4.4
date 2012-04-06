@@ -2,6 +2,7 @@
 <head>
 <title>Sapiens-app</title>
 <meta name="layout" content="main" />
+
 </head>
 <body>
 		<div class="nav" role="navigation">
