@@ -7,7 +7,7 @@
 		<g:message code="competence.code.label" default="Code" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="code" required="" value="${competenceInstance?.code}"/>
+	<g:textField name="code"  value="${competenceInstance?.code}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: competenceInstance, field: 'libelleCourt', 'error')} required">

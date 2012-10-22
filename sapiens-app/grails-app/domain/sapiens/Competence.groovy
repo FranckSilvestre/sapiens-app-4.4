@@ -21,8 +21,5 @@ class Competence {
 		libelleCourt(blank:false)
 		libelleLong(nullable:true)
 	}
-	
-	
-
-	
+		
 }

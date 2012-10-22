@@ -1,7 +1,5 @@
 package sapiens
 
-
-
 class SuiviCompetence {
 
 	Acteur acteur
