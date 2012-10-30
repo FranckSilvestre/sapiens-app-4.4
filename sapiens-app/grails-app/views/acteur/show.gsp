@@ -60,17 +60,7 @@
 					
 				</li>
 				</g:if>
-			
-				<g:if test="${acteurInstance?.suivisCompetences}">
-				<li class="fieldcontain">
-					<span id="suivisCompetences-label" class="property-label"><g:message code="acteur.suivisCompetences.label" default="Suivis Competences" /></span>
-					
-						<g:each in="${acteurInstance.suivisCompetences}" var="s">
-						<span class="property-value" aria-labelledby="suivisCompetences-label"><g:link controller="suiviCompetence" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
+
 			
 			</ol>
 			<g:form>

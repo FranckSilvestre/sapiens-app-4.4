@@ -49,7 +49,7 @@ class GestionCompetencesTests {
 		assertNotNull(domFetch)
 		assertEquals(2, domFetch.competences.size())
 
-		gestionCompetencesService.deleteDomaineCompetences("socle")
+		gestionCompetencesService.deleteDomaineCompetences(domFetch)
 		assertEquals(0, DomaineCompetences.count())
 		assertEquals(0, Competence.count())
 	}
@@ -81,8 +81,8 @@ class GestionCompetencesTests {
 		assertEquals(1, domFetch1.acteursEvalues.size())
 		assertEquals(0, actFetch22.domainesEnEvaluation.size())
 		
-		gestionCompetencesService.deleteDomaineCompetences("socle")
-		gestionCompetencesService.deleteDomaineCompetences("avance")
+		gestionCompetencesService.deleteDomaineCompetences(domFetch)
+		gestionCompetencesService.deleteDomaineCompetences(domFetch2)
 		def domFech3 = DomaineCompetences.findByCode("socle")
 		assertNull(domFech3)
 		assertEquals(0, DomaineCompetences.count())
@@ -117,7 +117,7 @@ class GestionCompetencesTests {
 		assertEquals(0, suivisCompetencesAct2.size())
 		
 		
-		gestionCompetencesService.deleteDomaineCompetences(domaine.code)
+		gestionCompetencesService.deleteDomaineCompetences(domaine)
 		assertEquals(0, Competence.count())
 		assertEquals(0, SuiviCompetence.count())
 		

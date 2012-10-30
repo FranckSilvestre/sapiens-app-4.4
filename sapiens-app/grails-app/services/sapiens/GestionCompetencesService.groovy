@@ -77,7 +77,7 @@ class GestionCompetencesService {
 		domaine.addToActeursEvalues(acteur)
 		domaine.save()
 		domaine.competences.each {
-			new SuiviCompetence(acteur: acteur, competence: it).save()
+          SuiviCompetence.findOrSaveWhere(acteur: acteur, competence: it)
 		}
 	}
 	
